@@ -92,13 +92,11 @@ exports.deleteSection = async (req, res) => {
             message: "Section deleted successfully"
         })
 
-    }
-
     } catch (error) {
-    res.status(500).json({
-        success: false,
-        message: "Unable to create section, please try again",
-        error: error.message
-    })
-}
+        res.status(500).json({
+            success: false,
+            message: "Unable to create section, please try again",
+            error: error.message
+        })
+    }
 }
